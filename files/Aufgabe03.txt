@@ -1,0 +1,15 @@
+PersonList ReadingList = new PersonList();
+		String ReadingVorname="";
+		String ReadingNachname="";
+		int ReadingGeburtsJahr=0;
+		while (s.hasNext()) {
+			ReadingVorname=s.next();
+			ReadingNachname=s.next();
+			if (s.hasNextInt()){
+				ReadingGeburtsJahr=s.nextInt();
+			}
+			Person ReadingPerson = new Person(ReadingVorname,ReadingNachname,ReadingGeburtsJahr);
+			ReadingList.add(ReadingPerson);
+		}
+		return ReadingList;
+}
